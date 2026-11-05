@@ -25,6 +25,20 @@ jobs:
       - name: Show tool versions
         run: node --version && npm --version
 
+      # Tagging an older commit should not turn the build red just because
+      # that version is already on the registry.
+      - name: Check whether this version is already published
+        id: check
+        run: |
+          version=$(node -p "require('./package.json').version")
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if curl -sf "https://registry.npmjs.org/dsh-header-fix/$version" > /dev/null; then
+            echo "dsh-header-fix@$version is already on the registry, skipping"
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # Authenticates through OIDC. Requires a trusted publisher on npmjs.com
       # pointing at this repository and this workflow file, so no token is
       # stored anywhere. The very first release has to be published by hand,
@@ -33,4 +47,5 @@ jobs:
       #
       # Provenance is generated automatically for public repositories, so
       # --provenance is not needed here.
-      - run: npm publish
+      - if: steps.check.outputs.publish == 'true'
+        run: npm publish
