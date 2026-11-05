@@ -205,4 +205,4 @@ Either of these would do it:
 
 ## License
 
-MIT
+[MIT](LICENSE)
