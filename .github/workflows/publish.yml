@@ -31,6 +31,6 @@ jobs:
       # because npm will not let you configure a trusted publisher for a
       # package that does not exist yet.
       #
-      # No --provenance: npm only attests builds from public repositories, and
-      # this one is private.
+      # Provenance is generated automatically for public repositories, so
+      # --provenance is not needed here.
       - run: npm publish
