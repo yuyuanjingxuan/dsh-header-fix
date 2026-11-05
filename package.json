@@ -1,0 +1,46 @@
+{
+  "name": "dsh-header-fix",
+  "version": "1.0.0",
+  "description": "Workaround for the DeepSeek Harness startup failure caused by an oversized Cookie header (HTTP 431).",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "electron",
+    "asar",
+    "workaround",
+    "http-431"
+  ],
+  "homepage": "https://github.com/yuyuanjingxuan/dsh-header-fix#readme",
+  "bugs": {
+    "url": "https://github.com/yuyuanjingxuan/dsh-header-fix/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyuanjingxuan/dsh-header-fix.git"
+  },
+  "license": "MIT",
+  "author": "Zhenyu",
+  "type": "module",
+  "bin": {
+    "dsh-header-fix": "patch.mjs",
+    "dsh-clean-cookies": "tools/clean-cookies.mjs"
+  },
+  "files": [
+    "patch.mjs",
+    "tools/clean-cookies.mjs",
+    "docs/ROOT-CAUSE.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "os": [
+    "win32"
+  ],
+  "scripts": {
+    "check": "node patch.mjs check",
+    "verify": "node patch.mjs verify"
+  }
+}
