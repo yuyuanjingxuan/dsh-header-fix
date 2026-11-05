@@ -1,6 +1,6 @@
 {
   "name": "dsh-header-fix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Workaround for the DeepSeek Harness startup failure caused by an oversized Cookie header (HTTP 431).",
   "keywords": [
     "deepseek",
@@ -34,6 +34,8 @@
     "tools/clean-cookies.bat",
     "docs/ROOT-CAUSE.md",
     "README.md",
+    "README.zh-CN.md",
+    "logo.svg",
     "LICENSE"
   ],
   "engines": {
