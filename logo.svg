@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="dsh-header-fix">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3444"/>
+      <stop offset="1" stop-color="#151a22"/>
+    </linearGradient>
+    <mask id="bite">
+      <rect width="128" height="128" fill="#fff"/>
+      <circle cx="87" cy="29" r="18" fill="#000"/>
+    </mask>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+
+  <g mask="url(#bite)">
+    <circle cx="56" cy="58" r="34" fill="#e8b06a"/>
+    <circle cx="56" cy="58" r="34" fill="none" stroke="#c98f45" stroke-width="3"/>
+  </g>
+
+  <g fill="#8a5a2b">
+    <circle cx="44" cy="46" r="4.5"/>
+    <circle cx="63" cy="41" r="3.5"/>
+    <circle cx="38" cy="67" r="3.5"/>
+    <circle cx="58" cy="63" r="4.5"/>
+    <circle cx="50" cy="81" r="3.5"/>
+    <circle cx="71" cy="75" r="3"/>
+  </g>
+
+  <circle cx="94" cy="94" r="24" fill="#2ea043" stroke="#151a22" stroke-width="5"/>
+  <path d="M84 94.5 L91 101.5 L104.5 87" fill="none" stroke="#fff" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

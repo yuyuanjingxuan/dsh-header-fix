@@ -1,8 +1,17 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yuyuanjingxuan/dsh-header-fix/main/logo.svg" width="96" height="96" alt="">
+</p>
+
 # dsh-header-fix
 
+English | [简体中文](README.zh-CN.md)
+
 [![npm](https://img.shields.io/npm/v/dsh-header-fix)](https://www.npmjs.com/package/dsh-header-fix)
+[![release](https://img.shields.io/github/v/release/yuyuanjingxuan/dsh-header-fix)](https://github.com/yuyuanjingxuan/dsh-header-fix/releases)
+[![build](https://img.shields.io/github/actions/workflow/status/yuyuanjingxuan/dsh-header-fix/publish.yml)](https://github.com/yuyuanjingxuan/dsh-header-fix/actions/workflows/publish.yml)
+[![issues](https://img.shields.io/github/issues/yuyuanjingxuan/dsh-header-fix)](https://github.com/yuyuanjingxuan/dsh-header-fix/issues)
+[![license](https://img.shields.io/github/license/yuyuanjingxuan/dsh-header-fix)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)](#usage)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.5%2B-4B32C3)](#version-status)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-339933)](#usage)
 [![Status](https://img.shields.io/badge/status-workaround-orange)](#what-the-fix-does)
