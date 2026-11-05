@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="dsh-header-fix">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef1f5"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#9cc4fd"/>
+      <stop offset="0.42" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+    <radialGradient id="ok" cx="0.38" cy="0.35" r="0.85">
+      <stop offset="0" stop-color="#4ade80"/>
+      <stop offset="0.55" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </radialGradient>
+    <mask id="jaw">
+      <rect width="100" height="100" fill="#fff"/>
+      <polygon points="42,0 58,0 55,24 45,24" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#bg)"/>
+  <rect x="9" y="45" width="29" height="11" rx="5.5" fill="url(#bar)"/>
+  <rect x="62" y="45" width="29" height="11" rx="5.5" fill="url(#bar)"/>
+  <g transform="rotate(-45 50 50)" mask="url(#jaw)">
+    <rect x="43.5" y="32" width="13" height="44" rx="6.5" fill="url(#steel)"/>
+    <circle cx="50" cy="28" r="15" fill="url(#steel)"/>
+  </g>
+  <rect x="0.4" y="0.4" width="99.2" height="99.2" rx="20" fill="none" stroke="#d5dce5" stroke-width="0.8"/>
+  <circle cx="77.8" cy="78.2" r="10" fill="#b1bac1"/>
+  <circle cx="77" cy="77" r="10" fill="url(#ok)"/>
+  <path d="M72.6 77.2 L75.8 80.4 L81.6 73.9" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
