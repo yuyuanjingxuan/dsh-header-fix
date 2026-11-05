@@ -1,5 +1,11 @@
 # dsh-header-fix
 
+[![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)](#usage)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.5%2B-4B32C3)](#version-status)
+[![Node](https://img.shields.io/badge/node-%3E%3D22-339933)](#usage)
+[![Status](https://img.shields.io/badge/status-workaround-orange)](#what-the-fix-does)
+
 Fixes a startup failure in DeepSeek Harness:
 
 ```
