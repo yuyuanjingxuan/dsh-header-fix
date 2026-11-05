@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# Keep CRLF in the repository for batch files. GitHub's ZIP download serves the
+# blob as-is, and cmd.exe misparses LF-only batch files.
+*.bat -text
+*.cmd -text
