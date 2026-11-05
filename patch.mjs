@@ -17,10 +17,13 @@
  * cookies. See docs/ROOT-CAUSE.md for the full write-up.
  *
  * Usage:
- *   node patch.mjs apply  "<install dir>"   patch app.asar and clean cookies
- *   node patch.mjs revert "<install dir>"   restore the original app.asar
- *   node patch.mjs check  "<install dir>"   report state, change nothing
- *   node patch.mjs verify "<install dir>"   check asar integrity
+ *   node patch.mjs apply  ["<install dir>"]   patch app.asar and clean cookies
+ *   node patch.mjs revert ["<install dir>"]   restore the original app.asar
+ *   node patch.mjs check  ["<install dir>"]   report state, change nothing
+ *   node patch.mjs verify ["<install dir>"]   check asar integrity
+ *
+ * The install directory is looked up in the uninstall registry key when it is
+ * not given, so `npx dsh-header-fix` works without arguments.
  */
 
 import { createHash } from "node:crypto";
@@ -256,10 +259,41 @@ function resolveAsar(home) {
   return asar;
 }
 
+// The uninstall key is the only reliable source; the default path is a fallback.
+function findInstallDir() {
+  try {
+    const out = execFileSync(
+      "reg",
+      [
+        "query",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+        "/s",
+        "/f",
+        "DeepSeek Harness",
+        "/d",
+      ],
+      { encoding: "utf8", windowsHide: true }
+    );
+    for (const line of out.split(/\r?\n/)) {
+      const m = line.match(/InstallLocation\s+REG_SZ\s+(.+)$/i);
+      if (!m) continue;
+      const dir = m[1].trim();
+      if (existsSync(join(dir, "resources", "app.asar"))) return dir;
+    }
+  } catch {
+    // reg is missing or the key does not exist; fall through
+  }
+  const fallback = join(process.env.LOCALAPPDATA || "", "Programs", "DeepSeek Harness");
+  if (existsSync(join(fallback, "resources", "app.asar"))) return fallback;
+  return null;
+}
+
 async function main() {
-  const [cmd = "apply", home] = process.argv.slice(2);
+  const [cmd = "apply", homeArg] = process.argv.slice(2);
+  const home = homeArg || findInstallDir();
   if (!home) {
-    console.error('usage: node patch.mjs <apply|revert|check|verify> "<install dir>"');
+    console.error("Could not find the DeepSeek Harness install directory.");
+    console.error('Pass it explicitly: node patch.mjs <action> "C:\\path\\to\\DeepSeek Harness"');
     process.exitCode = 2;
     return;
   }

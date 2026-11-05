@@ -94,6 +94,20 @@ For a non-default location:
 fix.bat apply "D:\Apps\DeepSeek Harness"
 ```
 
+### With npx
+
+If you have Node.js >= 22.5 on PATH, the same thing without cloning:
+
+```bash
+npx dsh-header-fix            # apply
+npx dsh-header-fix check      # inspect
+npx dsh-header-fix revert     # undo
+npx dsh-clean-cookies         # cookies only
+```
+
+The install directory is detected the same way, so no argument is needed. Pass one to
+override it.
+
 ### Revert
 
 ```bat
