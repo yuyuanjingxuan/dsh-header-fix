@@ -10,7 +10,7 @@
 [![release](https://img.shields.io/github/v/release/yuyuanjingxuan/dsh-header-fix)](https://github.com/yuyuanjingxuan/dsh-header-fix/releases)
 [![build](https://img.shields.io/github/actions/workflow/status/yuyuanjingxuan/dsh-header-fix/publish.yml)](https://github.com/yuyuanjingxuan/dsh-header-fix/actions/workflows/publish.yml)
 [![issues](https://img.shields.io/github/issues/yuyuanjingxuan/dsh-header-fix)](https://github.com/yuyuanjingxuan/dsh-header-fix/issues)
-[![license](https://img.shields.io/github/license/yuyuanjingxuan/dsh-header-fix)](LICENSE)
+[![license](https://img.shields.io/github/license/yuyuanjingxuan/dsh-header-fix?cacheSeconds=3600)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)](#用法)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.5%2B-4B32C3)](#版本情况)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-339933)](#用法)
@@ -61,7 +61,7 @@ Error: desktop welcome: Web authentication failed
 
 跟网络、代理、账号、安装包都没关系。纯粹是启动次数的问题：大概 70 次左右就会踩到。
 
-完整的排查过程在 [docs/ROOT-CAUSE.md](docs/ROOT-CAUSE.md)。
+完整的排查过程在 [docs/ROOT-CAUSE.md](docs/ROOT-CAUSE.md)（英文）。
 
 ---
 
