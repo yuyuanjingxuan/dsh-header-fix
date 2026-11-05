@@ -1,5 +1,6 @@
 # dsh-header-fix
 
+[![npm](https://img.shields.io/npm/v/dsh-header-fix)](https://www.npmjs.com/package/dsh-header-fix)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)](#usage)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.5%2B-4B32C3)](#version-status)
