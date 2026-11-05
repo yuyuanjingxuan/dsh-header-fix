@@ -28,7 +28,10 @@
   },
   "files": [
     "patch.mjs",
+    "fix.bat",
+    "revert.bat",
     "tools/clean-cookies.mjs",
+    "tools/clean-cookies.bat",
     "docs/ROOT-CAUSE.md",
     "README.md",
     "LICENSE"

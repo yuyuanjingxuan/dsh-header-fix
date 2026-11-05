@@ -22,10 +22,15 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           package-manager-cache: false
 
-      # npm uses OIDC when it is available and falls back to NODE_AUTH_TOKEN
-      # otherwise. The token is only needed for the very first publish, because
-      # npmjs.com will not let you configure a trusted publisher for a package
-      # that does not exist yet.
+      - name: Show tool versions
+        run: node --version && npm --version
+
+      # Authenticates through OIDC. Requires a trusted publisher on npmjs.com
+      # pointing at this repository and this workflow file, so no token is
+      # stored anywhere. The very first release has to be published by hand,
+      # because npm will not let you configure a trusted publisher for a
+      # package that does not exist yet.
+      #
+      # No --provenance: npm only attests builds from public repositories, and
+      # this one is private.
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
