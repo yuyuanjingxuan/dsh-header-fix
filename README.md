@@ -1,20 +1,14 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yuyuanjingxuan/dsh-header-fix/main/logo.svg" width="96" height="96" alt="">
+<h1><img src="assets/logo.svg" width="52" alt="dsh-header-fix logo"> dsh-header-fix</h1>
+
+<p align="left">English | <a href="README.zh-CN.md">简体中文</a></p>
+
+<p align="left">
+  <a href="https://github.com/yuyuanjingxuan/dsh-header-fix/actions/workflows/publish.yml"><img alt="CI" src="https://github.com/yuyuanjingxuan/dsh-header-fix/actions/workflows/publish.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
+  <a href="#version-status"><img alt="DeepSeek Harness" src="https://img.shields.io/badge/DeepSeek%20Harness-0.2.1%2B-1f6feb"></a>
+  <a href="#usage"><img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20x64-lightgrey"></a>
+  <a href="https://www.npmjs.com/package/dsh-header-fix"><img alt="Version" src="https://img.shields.io/npm/v/dsh-header-fix"></a>
 </p>
-
-# dsh-header-fix
-
-English | [简体中文](README.zh-CN.md)
-
-[![npm](https://img.shields.io/npm/v/dsh-header-fix)](https://www.npmjs.com/package/dsh-header-fix)
-[![release](https://img.shields.io/github/v/release/yuyuanjingxuan/dsh-header-fix)](https://github.com/yuyuanjingxuan/dsh-header-fix/releases)
-[![build](https://img.shields.io/github/actions/workflow/status/yuyuanjingxuan/dsh-header-fix/publish.yml)](https://github.com/yuyuanjingxuan/dsh-header-fix/actions/workflows/publish.yml)
-[![issues](https://img.shields.io/github/issues/yuyuanjingxuan/dsh-header-fix)](https://github.com/yuyuanjingxuan/dsh-header-fix/issues)
-[![license](https://img.shields.io/github/license/yuyuanjingxuan/dsh-header-fix?cacheSeconds=3600)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)](#usage)
-[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.5%2B-4B32C3)](#version-status)
-[![Node](https://img.shields.io/badge/node-%3E%3D22-339933)](#usage)
-[![Status](https://img.shields.io/badge/status-workaround-orange)](#what-the-fix-does)
 
 Fixes a startup failure in DeepSeek Harness:
 
