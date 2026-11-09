@@ -8,6 +8,7 @@
   <a href="#version-status"><img alt="DeepSeek Harness" src="https://img.shields.io/badge/DeepSeek%20Harness-0.2.1%2B-1f6feb"></a>
   <a href="#usage"><img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20x64-lightgrey"></a>
   <a href="https://www.npmjs.com/package/dsh-header-fix"><img alt="Version" src="https://img.shields.io/npm/v/dsh-header-fix"></a>
+  <a href="https://www.npmjs.com/package/dsh-header-fix"><img alt="Downloads" src="https://img.shields.io/npm/dw/dsh-header-fix"></a>
 </p>
 
 Fixes a startup failure in DeepSeek Harness:
